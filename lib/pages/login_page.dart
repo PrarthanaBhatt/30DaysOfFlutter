@@ -2,29 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    var size = Size(150, 40);
     return Material(
         color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             children: [
               Image.asset(
-                "assets/images/login_img.png",
+                "assets/images/undraw_summer.png",
                 fit: BoxFit.cover,
-                height: 300,
               ),
               const SizedBox(
                 height: 20.0,
-                //  child: Text("Hii prarthana")
               ),
               const Text(
                 "Welcome",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -37,14 +32,14 @@ class LoginPage extends StatelessWidget {
                 child: Column(
                   children: [
                     TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter username",
                         labelText: "Username",
                       ),
                     ),
                     TextFormField(
                       obscureText: true,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: "Enter password",
                         labelText: "Password",
                       ),
@@ -53,11 +48,11 @@ class LoginPage extends StatelessWidget {
                       height: 40.0,
                     ),
                     ElevatedButton(
+                      child: const Text("Login"),
+                      style: TextButton.styleFrom(minimumSize: Size(150, 40)),
                       onPressed: () {
                         Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
-                      child: Text("Login"),
-                      style: TextButton.styleFrom(minimumSize: size),
                     )
                   ],
                 ),
