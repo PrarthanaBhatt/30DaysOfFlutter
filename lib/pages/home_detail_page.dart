@@ -15,7 +15,7 @@ class HomeDetailsPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
         color: Colors.white,
         child: ButtonBar(
