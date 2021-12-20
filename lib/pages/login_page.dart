@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
@@ -107,24 +105,20 @@ class _LoginPageState extends State<LoginPage> {
                           width: changeButton ? 50 : 150,
                           height: 50,
                           alignment: Alignment.center,
-                          // ignore: prefer_const_constructors
                           child: changeButton
                               ? const Icon(
                                   Icons.done,
                                   color: Colors.white,
-                                  // ignore: prefer_const_constructors
                                 )
                               : const Text(
                                   "Login",
-                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18),
                                 ),
                           decoration: BoxDecoration(
-                             color: context.theme.buttonColor,
-                              // shape: changeButton ? BoxShape.circle :BoxShape.rectangle,
+                              color: context.theme.buttonColor,
                               borderRadius:
                                   BorderRadius.circular(changeButton ? 50 : 8)),
                         ),
