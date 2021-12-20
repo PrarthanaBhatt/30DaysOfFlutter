@@ -1,6 +1,11 @@
 import 'dart:convert';
 
 class CatalogModel {
+  //to create singleton class
+  static final catalogModel = CatalogModel._internal();
+  CatalogModel._internal();
+  factory CatalogModel() => catalogModel;
+
   static List<Item> items = [
     Item(
         id: 1,
@@ -13,11 +18,11 @@ class CatalogModel {
   ];
 
   //get item by id
-   Item getById(int id) =>
+  Item getById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
 
   //get item by position
-   Item getByPosition(int pos) => items[pos];
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
