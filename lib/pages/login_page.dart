@@ -1,5 +1,8 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/utils/routes.dart';
+import 'package:velocity_x/src/extensions/context_ext.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -31,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     var size = Size(150, 40);
     return Material(
-        color: Colors.white,
+        color: context.canvasColor,
         child: SingleChildScrollView(
           //   child: Form(
           // key: _formKey,
@@ -120,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                                       fontSize: 18),
                                 ),
                           decoration: BoxDecoration(
-                              color: Colors.deepPurple,
+                             color: context.theme.buttonColor,
                               // shape: changeButton ? BoxShape.circle :BoxShape.rectangle,
                               borderRadius:
                                   BorderRadius.circular(changeButton ? 50 : 8)),
