@@ -28,6 +28,9 @@ class CartPage extends StatelessWidget {
 class _CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //check VxConsumer/VxBuilder/VxNotifier
+    VxState.watch(context, on: [RemoveMutation]);
+
     final CartModel _cart = (VxState.store as MyStore).cart;
     return SizedBox(
       height: 200,
@@ -45,11 +48,25 @@ class _CartTotal extends StatelessWidget {
           //         .make();
           //   },
           // ),
+
+          // VxBuilder(
+          //   mutations: {RemoveMutation},
+          //   builder: (context,_) {
+          //     return "\$${_cart.totalPrice}"
+          //         .text
+          //         .xl5
+          //         .color(context.theme.accentColor)
+          //         .make();
+          //   },
+          // ),
+
+       
           "\$${_cart.totalPrice}"
               .text
               .xl5
               .color(context.theme.accentColor)
               .make(),
+
           30.widthBox,
           ElevatedButton(
             onPressed: () {
