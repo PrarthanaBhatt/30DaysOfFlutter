@@ -1,11 +1,7 @@
 import 'dart:convert';
 
 class CatalogModel {
-  //to create singleton class
-  static final catalogModel = CatalogModel._internal();
-  CatalogModel._internal();
-  factory CatalogModel() => catalogModel;
-
+ 
   static List<Item> items = [
     Item(
         id: 1,

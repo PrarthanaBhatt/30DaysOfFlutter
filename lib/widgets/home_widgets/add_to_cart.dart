@@ -4,24 +4,19 @@ import 'package:flutter_catalog/models/cart.dart';
 import 'package:flutter_catalog/models/catelog.dart';
 import 'package:velocity_x/src/extensions/bool_ext.dart';
 import 'package:velocity_x/src/extensions/context_ext.dart';
-import 'package:velocity_x/src/extensions/string_ext.dart';
 
-class AddToCart extends StatefulWidget {
+class AddToCart extends StatelessWidget {
   final Item catalog;
-  const AddToCart({
+   AddToCart({
     Key? key,
     required this.catalog,
   }) : super(key: key);
 
-  @override
-  State<AddToCart> createState() => _AddToCartState();
-}
-
-class _AddToCartState extends State<AddToCart> {
+ 
   final _cart = CartModel();
   @override
   Widget build(BuildContext context) {
-    bool isInCart = _cart.items.contains(widget.catalog) ?? false;
+    bool isInCart = _cart.items.contains(catalog) ?? false;
 
     return ElevatedButton(
         onPressed: () {
@@ -32,8 +27,8 @@ class _AddToCartState extends State<AddToCart> {
             final _catalog = CatalogModel();
 
             _cart.catalog = _catalog;
-            _cart.add(widget.catalog);
-            setState(() {});
+            _cart.add(catalog);
+            // setState(() {});
           }
         },
         style: ButtonStyle(
