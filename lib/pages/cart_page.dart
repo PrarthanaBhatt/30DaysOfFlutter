@@ -28,6 +28,7 @@ class CartPage extends StatelessWidget {
 class _CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("Rebuild done");
     //check VxConsumer/VxBuilder/VxNotifier
     VxState.watch(context, on: [RemoveMutation]);
 
@@ -60,7 +61,6 @@ class _CartTotal extends StatelessWidget {
           //   },
           // ),
 
-       
           "\$${_cart.totalPrice}"
               .text
               .xl5
