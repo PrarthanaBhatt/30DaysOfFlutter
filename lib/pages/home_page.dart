@@ -59,7 +59,6 @@ class _HomePageState extends State<HomePage> {
     VxState.watch(context, on: [AddMutation, RemoveMutation]);
     final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
-      // backgroundColor: context.canvasColor,
       backgroundColor: Theme.of(context).cardColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),

@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter_catalog/models/cart.dart';
 import 'package:flutter_catalog/models/catelog.dart';
-import 'package:velocity_x/src/extensions/bool_ext.dart';
-import 'package:velocity_x/src/extensions/context_ext.dart';
-import 'package:velocity_x/src/extensions/string_ext.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class AddToCart extends StatelessWidget {

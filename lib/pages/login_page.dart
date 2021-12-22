@@ -21,7 +21,6 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      // await Navigator.pushNamed(context, MyRoutes.homeRoute);
       await context.vxNav.push(Uri.parse(MyRoutes.homeRoute));
       setState(() {
         changeButton = false;
@@ -31,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = Size(150, 40);
+    var size = const Size(150, 40);
     return Material(
         color: context.canvasColor,
         child: SingleChildScrollView(
